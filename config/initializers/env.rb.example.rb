@@ -1,0 +1,3 @@
+ENV['BASE_URL'] = ''
+ENV['BEARER_TOKEN'] = ''
+ENV['URI_RSS'] = ''

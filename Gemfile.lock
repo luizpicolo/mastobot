@@ -20,11 +20,23 @@ GEM
       buftok (~> 0)
       http (~> 3.3)
       oj (~> 3.7)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     oj (3.10.5)
     public_suffix (4.0.3)
+    rack (2.2.2)
+    rack-protection (2.0.8.1)
+      rack
     rexml (3.2.4)
     rss (0.2.9)
       rexml
+    ruby2_keywords (0.0.2)
+    sinatra (2.0.8.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.8.1)
+      tilt (~> 2.0)
+    tilt (2.0.10)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
@@ -34,7 +46,12 @@ PLATFORMS
 
 DEPENDENCIES
   mastodon-api
+  rack
   rss
+  sinatra
+
+RUBY VERSION
+   ruby 2.6.5p114
 
 BUNDLED WITH
    2.1.4
