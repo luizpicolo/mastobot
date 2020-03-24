@@ -16,6 +16,18 @@ class Bot
     end
   end
 
+  def lasted_publications(amount)
+    publictions = []
+    File.open("db/out.txt", "a+") do |f| 
+      f.readlines.each_with_index do |value, index|
+        publictions << value.delete!("\n")
+        break if index == amount
+      end
+    end
+
+    publictions
+  end
+
   def add_last_date(pub_date)
     File.open("db/out.txt", "a+") do |f| 
       f.puts pub_date.to_s

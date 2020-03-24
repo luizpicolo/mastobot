@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Twitter Bot</title>
+	<title>MastoBot</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
@@ -11,8 +11,12 @@
 	<header>
 		<img src="/logo.png" />
 		<p>
-			Bot para consumir dados RSS e disponibilizar na rede social <a href="https://joinmastodon.org/">Mastodon</a>
+			Bot to consume RSS data and make it available on the social network Mastodon <a href="https://joinmastodon.org/">Mastodon</a>
 		</p>
+		<p>Date latest publications</p>
+		<% @publications.each do |publication| %>
+		<div><%= publication.delete('-0300') %></div>
+		<% end %>
 	</header>
 </body>
 </html>
