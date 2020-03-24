@@ -30,3 +30,8 @@ To test run in the terminal
 If everything went well you will have a news from the feed published in your instance.
 
 Each call to the task publishes only one news item. So, you will have to create a Cron task for automatic publication in your instance.
+
+# License
+
+This software uses the same license as Mastodon
+https://github.com/luizpicolo/mastobot/blob/master/LICENSE
