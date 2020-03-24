@@ -19,7 +19,7 @@ class Bot
   def lasted_publications(amount)
     publictions = []
     File.open("db/out.txt", "a+") do |f| 
-      f.readlines.each_with_index do |value, index|
+      f.readlines.reverse.each_with_index do |value, index|
         publictions << value.delete!("\n")
         break if index == amount
       end
