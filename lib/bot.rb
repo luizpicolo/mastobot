@@ -55,8 +55,10 @@ class Bot
 	def create_toot
     feed.items.reverse_each do |item| 
       if !find_pub_date(item.pubDate)
-        add_last_date(item.pubDate)   
-        @client.create_status("#{item.title} #{item.link}", params)
+        add_last_date(item.pubDate)  
+        if ENV['RACK_ENV'] != 'test'
+          @client.create_status("#{item.title} #{item.link}", params)
+        end
         return item.title
       end
     end
