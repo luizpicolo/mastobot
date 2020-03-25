@@ -21,8 +21,8 @@ class Bot
     publictions = []
     File.open(@path_file, "a+") do |f| 
       f.readlines.reverse.each_with_index do |value, index|
-        publictions << value.delete!("\n")
-        break if index == amount
+        publictions << Time.parse(value)
+        break if index == amount - 1
       end
     end
 
