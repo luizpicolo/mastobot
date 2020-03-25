@@ -1,4 +1,4 @@
 require_relative 'bot'
 
-bot = Bot.new
+bot = Bot.new('db/out.txt')
 bot.create_toot
