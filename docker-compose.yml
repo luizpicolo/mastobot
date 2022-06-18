@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    tty: true
+    container_name: mastobot
+    command: >
+      bash -c "whenever -w &&
+               /etc/init.d/cron restart &&
+               bundle exec ruby app.rb -o 0.0.0.0 -p 4567"
+    ports:
+      - "4569:4567"
+    volumes:
+      - .:/code
