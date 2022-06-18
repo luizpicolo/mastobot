@@ -47,7 +47,7 @@ class Bot
   end
 
   def feed
-    open(ENV['URI_RSS']) do |rss| 
+    URI.open(ENV['URI_RSS']) do |rss| 
       return RSS::Parser.parse(rss)
     end  
   end
