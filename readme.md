@@ -25,7 +25,7 @@ Go to `/config/initializers` and change with the requested data
 
 To test run in the terminal
 
-    ruby ./lib/task.rb
+    rake toot:create
 
 If everything went well you will have a news from the feed published in your instance.
 
