@@ -2,10 +2,11 @@ source 'https://rubygems.org'
 
 ruby '3.1.2'
 
-gem 'rack'
+gem 'rake'
 gem 'mastodon-api', require: 'mastodon'
 gem 'rss'
 gem 'sinatra'
+gem 'whenever', require: false
 
 group :test do
   gem 'rack-test'
