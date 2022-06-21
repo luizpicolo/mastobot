@@ -7,6 +7,6 @@ ENV.each_key do |key|
   env key.to_sym, ENV[key]
 end
 
-every 5.minutes do
+every 1.hour do
   rake "toot:create"
 end
